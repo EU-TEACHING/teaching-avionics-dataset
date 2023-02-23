@@ -18,10 +18,10 @@ TODO: I also updated the file ../avionic_traces.docx with the new nomenclature:
  * xFTx.Ix: FMS & FTT running on Cortex A53s, while continuous spectre running on Cortext A72
  * xFTx.Jx: FMS & FTT running on Cortex A53s, while intermittent spectre running on Cortext A72
 
----
-
  * xxxI.FT: FMS & FTT running on Cortex A72s, while continuous spectre running on Cortext A53
  * xxxJ.FT: FMS & FTT running on Cortex A72s, while intermittent spectre running on Cortext A53
+
+---
 
  * xKTx.xx: FMS and Spectre corunning on the same Cortex A53 core
  * xxxx.KT: FMS and Spectre corunning on the same Cortex A72 core
