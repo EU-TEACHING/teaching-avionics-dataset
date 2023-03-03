@@ -6,6 +6,7 @@ TODO: I also updated the file ../avionic_traces.docx with the new nomenclature:
 * C: BPred attack intermittently running on the core (a different one from where the FMS is running)
 * D: continuous BPRED attack affecting another application running on the same core as the FMS
 * E: continuous BPRED attack within the FMS applicaiton
+* E: intermittent BPRED attack within the FMS applicaiton
 
 ---
 
@@ -22,6 +23,8 @@ TODO: I also updated the file ../avionic_traces.docx with the new nomenclature:
  * xDTx.xx: FMS and bpred attacked process corunning on the same Cortex A53 core
  * xxxx.DT: FMS and bpred attacked process corunning on the same Cortex A72 core
 
- * xETx.xx: FMS internally affected by bpred attackon a Cortex A53 core
- * xxxx.ET: FMS internally affected by bpred attackon a Cortex A72 core
+ * xETx.xx: FMS internally affected by continuous bpred attack on a Cortex A53 core
+ * xxxx.ET: FMS internally affected by continuous bpred attack on a Cortex A72 core
+ * xGTx.xx: FMS internally affected by intermittent bpred attackon a Cortex A53 core
+ * xxxx.GT: FMS internally affected by intermittent bpred attackon a Cortex A72 core
 
