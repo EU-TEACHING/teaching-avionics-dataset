@@ -21,6 +21,6 @@ Check the folowing files:
 
 ## License
 
-Check LICENSE file
+Check the LICENSE file
 
 ![BY-NC-SA](by-nc-sa.svg)
