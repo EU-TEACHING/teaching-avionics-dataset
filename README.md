@@ -11,10 +11,10 @@ Check the folowing files:
  * TEACHING-D5.3_AI models training dataset_1.0.pdf
 
 ## Traces (see avionic_traces.docx)
- * LFBT_LFBL: dataset for flightplans between LFBT and LFBL airports, while 
- * cputheft : dataset for flightplans between LFBT and LFBL airports, while 
- * speculate : dataset for flightplans between LFBT and LFBL airports, while 
- * *bpred* : dataset for flightplans between LFBT and LFBL airports, while 
+ * **LFBT_LFBL**: dataset for flightplans between LFBT and LFBL airports, while corunning with the DDoS-L2 anomaly (DDoS to the L2 cache from the other cores)
+ * **cputheft**: dataset for flightplans between LFBT and LFBL airports, while corunning with the CPUtheft anomaly (Hi CPU computation load from another application)
+ * **speculate**: dataset for flightplans between LFBT and LFBL airports, while corunning with a spectre attack
+ * **bpred**: dataset for flightplans between LFBT and LFBL airports, while  corunning with a branch predictor hammering anomaly (Hi level of branch misprediction from other corunning applications and from the FMS applicaition)
 
 ## Common file:
  * hw_events_arm64.csv correspond to the list of available hardware events that could be counted on the iMx8 board (see avionic_traces.pptx).
