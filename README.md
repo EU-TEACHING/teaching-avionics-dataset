@@ -18,3 +18,9 @@ Check the folowing files:
 
 ## Common file:
  * hw_events_arm64.csv correspond to the list of available hardware events that could be counted on the iMx8 board (see avionic_traces.pptx).
+
+## License
+
+Check LICENSE file
+
+![BY-NC-SA](by-nc-sa.svg)
