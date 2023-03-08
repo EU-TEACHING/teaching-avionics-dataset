@@ -6,7 +6,7 @@ TODO: I also updated the file ../avionic_traces.docx with the new nomenclature:
 * C: BPred attack intermittently running on the core (a different one from where the FMS is running)
 * D: continuous BPRED attack affecting another application running on the same core as the FMS
 * E: continuous BPRED attack within the FMS applicaiton
-* E: intermittent BPRED attack within the FMS applicaiton
+* G: intermittent BPRED attack within the FMS applicaiton
 
 ---
 

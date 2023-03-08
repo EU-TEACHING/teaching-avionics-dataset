@@ -1,11 +1,9 @@
 I added the new experiments corresponding to the Spectre speculative attack anomaly to this folder. 
 
-TODO: I also updated the file ../avionic_traces.docx with the new nomenclature:
 
 * I: Spectre Continuous running on the core
 * J: Spectre Intermittent running on the core
 * K: FMS + Spectre continuous running on the same core
-
 
 ---
 
@@ -20,8 +18,6 @@ TODO: I also updated the file ../avionic_traces.docx with the new nomenclature:
 
  * xxxI.FT: FMS & FTT running on Cortex A72s, while continuous spectre running on Cortext A53
  * xxxJ.FT: FMS & FTT running on Cortex A72s, while intermittent spectre running on Cortext A53
-
----
 
  * xKTx.xx: FMS and Spectre corunning on the same Cortex A53 core
  * xxxx.KT: FMS and Spectre corunning on the same Cortex A72 core
