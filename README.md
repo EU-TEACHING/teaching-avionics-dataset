@@ -6,10 +6,10 @@ behavior of the software critical tasks on the hardware.
 ## Documentation
 
 Check the folowing files:
- * avionic_traces.docx
- * avionic_traces.pptx
- * TEACHING-D5.3_AI models training dataset_1.0.pdf
-
+ * **avionic_usecase.docx**: High-level description of the avionic use-case
+ * **avionic_traces.docx**: Description of the behavioral traces
+ * **avionic_traces.pptx**: Description of the behavioral traces
+ 
 ## Traces (see avionic_traces.docx)
  * **LFBT_LFBL**: dataset for flightplans between LFBT and LFBL airports, while corunning with the DDoS-L2 anomaly (DDoS to the L2 cache from the other cores)
  * **cputheft**: dataset for flightplans between LFBT and LFBL airports, while corunning with the CPUtheft anomaly (Hi CPU computation load from another application)
