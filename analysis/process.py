@@ -27,7 +27,14 @@ METRICS_CONFIGS = [
         "VFP_SPEC",
         "L1I_CACHE_REFILL",
     ],  # speculate, 4th anomaly
-    ["LD_SPEC", "ST_SPEC", "L1D_CACHE", "INST_SPEC", "L1I_CACHE", "L1I_CACHE_REFILL"],
+    [
+        "LD_SPEC", 
+        "ST_SPEC", 
+        "L1D_CACHE", 
+        "INST_SPEC", 
+        "L1I_CACHE", 
+        "L1I_CACHE_REFILL"
+    ],
     [
         "L1D_TLB_REFILL",
         "L1I_TLB_REFILL",
