@@ -4,6 +4,7 @@ I added the new experiments corresponding to the Spectre speculative attack anom
 * I: Spectre Continuous running on the core
 * J: Spectre Intermittent running on the core
 * K: FMS + Spectre continuous running on the same core
+* L: FMS + Spectre intermittent running on the same core
 
 ---
 
