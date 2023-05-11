@@ -11,7 +11,7 @@ I also updated the file ../avionic_traces.docx with the new nomenclature:
 
  * xxxx.UT: FMS and CPUtheft anomaly running on first Cortex A72 core and FFT running standalone on the second Cortex A72 core. 
 
- * xFTC.xx: FMS, FTT and Cputheft anomaly each running on a different Cortex A53.
+ * xFTW.xx: FMS, FTT and Cputheft anomaly each running on a different Cortex A53.
 
  * xUTx.xx: FMS and intermittent CPUtheft anomaly running on second Cortex A53 core and FFT running standalone on the third Cortex A53 core. 
 
@@ -20,7 +20,7 @@ On the Cortex A53 core, the FMS uses 80%-95% of the CPU load, and therefore the 
 
 On the high-performance Cortex A72 core, the FMS uses 25% of CPU load, and the load seems to remain the same while running with the anomaly. So I don’t expect significant results for this one. 
 
-Running the CPUtheft anomaly on its dedicated core (xFTC.xx)
+Running the CPUtheft anomaly on its dedicated core (xFTW.xx)
 should have no impact on the FMS behavior.
 
 intermittent CPUtheft means altering 15s period of CPUtheft and 15s period of idle.
