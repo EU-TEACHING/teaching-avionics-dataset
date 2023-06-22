@@ -38,7 +38,7 @@ METRICS_CONFIGS = [
     ],
 ]
 
-ANOMALY_DIRS = ["LFBT_LFBL", "cputheft", "bpred"]  # , "speculate"]
+ANOMALY_DIRS = ["LFBT_LFBL", "cputheft", "bpred", "speculate"]
 ANOMALY_CLASSES = {"NOSTRESS": 0, "STSB": 1, "CPUTHEFT": 2, "BPRED": 3, "SPECTRE": 4}
 
 
@@ -87,6 +87,7 @@ def load_dataset(metrics_config_index: int, train: bool = True):
             "LFBT_LFBL": ("ZFTZ.ZZ",),
             "cputheft": ("xVTx.xx",),
             "bpred": ("xGTx.xx",),
+            "speculate": ("xLTx.xx"),
         }
 
     dfs = []
