@@ -3,7 +3,9 @@
 import argparse
 import glob
 import csv
+import os.path
 from rich.pretty import pprint
+from pathlib import Path
 
 # ------------------------------------------------------------------------------
 
@@ -70,9 +72,10 @@ def retrieve_event_names():
 
 def convert_raws_to_eventid(infolder,outfolder,runinfos):
   # duplicate raw csv with updated header looking like "EVT24" instead of "PMC0"
+  Path(f"{outfolder}/{infolder}").mkdir(parents=True, exist_ok=True)
   for run,runinfo in runinfos.items():
     rawname = f"{infolder}/raw_{run}.csv"
-    outname = f"{outfolder}/raw_{run}.csv.2"
+    outname = f"{outfolder}/{infolder}/raw_{run}.csv"
     with open(outname,"w") as fout:
       with open(rawname,"r") as fin:
         headers = fin.readline()
@@ -86,9 +89,10 @@ def convert_raws_to_eventid(infolder,outfolder,runinfos):
 
 def convert_raws_to_eventnames(infolder,outfolder,runinfos,events):
   # duplicate raw csv with updated header looking like "L1D_CACHE" instead of "PMC0"
+  Path(f"{outfolder}/{infolder}").mkdir(parents=True, exist_ok=True)
   for run,runinfo in runinfos.items():
     rawname = f"{infolder}/raw_{run}.csv"
-    outname = f"{outfolder}/raw_{run}.csv.3"
+    outname = f"{outfolder}/{infolder}/raw_{run}.csv"
     with open(outname,"w") as fout:
       with open(rawname,"r") as fin:
         headers = fin.readline()
@@ -100,24 +104,32 @@ def convert_raws_to_eventnames(infolder,outfolder,runinfos,events):
 
 # ------------------------------------------------------------------------------
 
+def consolidate(infolder):
+  pprint(infolder)
+  runinfos = extract_runinfos(infolder)
+  #c,f = retrieve_configurations(runinfos)
+  events = retrieve_event_names()
+  convert_raws_to_eventid(infolder,"consolidated_by_id",runinfos)
+  convert_raws_to_eventnames(infolder,"consolidated_by_name",runinfos,events)
+
+# ------------------------------------------------------------------------------
+
+
 parser = argparse.ArgumentParser(
                     description='What the program does',
                     epilog='Text at the bottom of help')
 parser.add_argument('input_folder')
-parser.add_argument('output_folder')
-
 args = parser.parse_args()
 
 infolder = args.input_folder
-outfolder = args.output_folder
 
-runinfos = extract_runinfos(infolder)
-#c,f = retrieve_configurations(runinfos)
-events = retrieve_event_names()
+consolidate(infolder)
 
-pprint(runinfos)
+folders = ["bpred","cputheft","speculate","LFBT_LFBL"]
+subfolders = []
+for f in folders:
+  subfolders.extend(glob.glob(f"{f}/*"))
 
-convert_raws_to_eventid(infolder,outfolder,runinfos)
-convert_raws_to_eventnames(infolder,outfolder,runinfos,events)
-
-
+for s in subfolders:
+  if os.path.isdir(s):
+    consolidate(s)
