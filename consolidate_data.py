@@ -6,6 +6,7 @@ import csv
 import os.path
 from rich.pretty import pprint
 from pathlib import Path
+import shutil
 
 # ------------------------------------------------------------------------------
 
@@ -114,22 +115,16 @@ def consolidate(infolder):
 
 # ------------------------------------------------------------------------------
 
-
-parser = argparse.ArgumentParser(
-                    description='What the program does',
-                    epilog='Text at the bottom of help')
-parser.add_argument('input_folder')
-args = parser.parse_args()
-
-infolder = args.input_folder
-
-consolidate(infolder)
-
 folders = ["bpred","cputheft","speculate","LFBT_LFBL"]
 subfolders = []
 for f in folders:
   subfolders.extend(glob.glob(f"{f}/*"))
 
+#for s in subfolders:
+#  if os.path.isdir(s):
+#    consolidate(s)
+
 for s in subfolders:
-  if os.path.isdir(s):
-    consolidate(s)
+  if not os.path.isdir(s):
+    print(s)
+    shutil.copy(s,"consolidated_by_id")
